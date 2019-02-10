@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.natty.dentalpayment.Bill">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_default="wrap"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="420dp">
+
+            <TextView
+                android:id="@+id/billingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:text="Billing"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@android:dimen/app_icon_size"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/patinetRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/patientTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="8dp"
+                    android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                    android:text="Patient Name"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/patientEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/patientTextView"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_toEndOf="@+id/patientTextView"
+                    android:layout_toRightOf="@+id/patientTextView"
+                    android:ems="10"
+                    android:hint="Enter Patient Name"
+                    android:inputType="textPersonName" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cleaningRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <CheckBox
+                    android:id="@+id/cleaningeCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="cleaningCheckBoxFun"
+                    android:text="Cleaning"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/cleaningTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_toEndOf="@+id/cleaningeCheckBox"
+                    android:layout_toRightOf="@+id/cleaningeCheckBox"
+                    android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                    android:text="$35"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fluorideRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <CheckBox
+                    android:id="@+id/fluorideCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="fluorideCheckBoxFun"
+                    android:text="Fluoride"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/fluorideTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="104dp"
+                    android:layout_marginStart="104dp"
+                    android:layout_toEndOf="@+id/fluorideCheckBox"
+                    android:layout_toRightOf="@+id/fluorideCheckBox"
+                    android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                    android:text="$50"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cavityRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <CheckBox
+                    android:id="@+id/cavityCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="cavityCheckBoxFun"
+                    android:text="Cavity"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/cavityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="124dp"
+                    android:layout_marginStart="124dp"
+                    android:layout_toEndOf="@+id/cavityCheckBox"
+                    android:layout_toRightOf="@+id/cavityCheckBox"
+                    android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                    android:text="$150"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/xRayRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <CheckBox
+                    android:id="@+id/xrayCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="xRayCheckBoxFun"
+                    android:text="X-Ray"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/xrayTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="128dp"
+                    android:layout_marginStart="128dp"
+                    android:layout_toEndOf="@+id/xrayCheckBox"
+                    android:layout_toRightOf="@+id/xrayCheckBox"
+                    android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                    android:text="$85"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/otherRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="329dp"
+                tools:layout_editor_absoluteY="464dp">
+
+                <CheckBox
+                    android:id="@+id/otherCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="otherCheckBoxFun"
+                    android:text="Other"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/otherTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="49dp"
+                    android:layout_marginStart="49dp"
+                    android:layout_toEndOf="@+id/otherCheckBox"
+                    android:layout_toRightOf="@+id/otherCheckBox"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="Enter Value Here"
+                    android:inputType="numberDecimal" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/totalRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="329dp"
+                tools:layout_editor_absoluteY="464dp">
+
+                <Button
+                    android:id="@+id/calculateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateTotalFun"
+                    android:text="Calculate" />
+
+                <EditText
+                    android:id="@+id/resultTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_toEndOf="@+id/calculateButton"
+                    android:layout_toRightOf="@+id/calculateButton"
+                    android:editable="false"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="Total"
+                    android:inputType="textPersonName" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/summaryRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                tools:layout_editor_absoluteX="329dp"
+                tools:layout_editor_absoluteY="464dp">
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/displayButton"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/displayButton"
+                    android:onClick="saveFunction"
+                    android:text="Home" />
+
+                <Button
+                    android:id="@+id/clearButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/displayButton"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/displayButton"
+                    android:onClick="clearFunction"
+                    android:text="Clear" />
+
+                <Button
+                    android:id="@+id/displayButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="12dp"
+                    android:onClick="displayFunction"
+                    android:text="Display Bill Summary" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/displayRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="329dp"
+                tools:layout_editor_absoluteY="464dp">
+
+                <TextView
+                    android:id="@+id/displayTextView"
+                    android:layout_width="395dp"
+                    android:layout_height="205dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    tools:layout_editor_absoluteX="897dp"
+                    tools:layout_editor_absoluteY="529dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

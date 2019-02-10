@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/userEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lastNameEditText"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/lastNameEditText"
+        android:layout_marginTop="126dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/lastNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/dateOfBirthEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lastNameEditText"
+        android:layout_alignStart="@+id/lastNameEditText"
+        android:layout_below="@+id/lastNameEditText"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:hint="date of birth"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/addPatientButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dateOfBirthEditText"
+        android:layout_alignStart="@+id/dateOfBirthEditText"
+        android:layout_below="@+id/dateOfBirthEditText"
+        android:layout_marginTop="36dp"
+        android:onClick="addPatientFunction"
+        android:text="Add Patient" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/addPatientButton"
+        android:layout_alignBottom="@+id/addPatientButton"
+        android:layout_alignEnd="@+id/dateOfBirthEditText"
+        android:layout_alignRight="@+id/dateOfBirthEditText"
+        android:onClick="cancelPatientFunction"
+        android:text="Cancel" />
+</RelativeLayout>
